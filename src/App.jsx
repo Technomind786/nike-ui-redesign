@@ -1,4 +1,5 @@
 import logo from "./assets/logo.png";
+import logo1 from "./assets/logo1.png";
 import React, { useState, useEffect, useRef } from 'react';
 import { ShoppingBag, Search, Menu, ArrowRight, Play, Star, X, Check, ChevronRight, Maximize2, Plus } from 'lucide-react';
 
@@ -71,7 +72,6 @@ const styles = `
   
   .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
   .glass-modal { backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); background: rgba(255,255,255,0.85); }
-
   /* Premium Shoe Glare Effect */
   .shoe-glare {
     position: absolute;
@@ -233,9 +233,11 @@ export default function App() {
   if (loading) {
     return (
       <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
-        <svg viewBox="0 0 73 26" className="w-32 md:w-48 text-white fill-current animate-pulse mb-8">
-          <path d="M21.5 25.4c-6.2 0-11.6-1.9-15.7-5.5C2.1 16.6.1 12.4.1 7.4.1 4.5 1.2 1.8 3.3.1c-.2.7-.3 1.4-.3 2.2 0 4.1 2.8 8.1 7.8 11.2 3.6 2.2 8.3 3.8 13.5 4.5 4.8.6 9.8.5 14.8-.2 6-.8 11.8-2.3 17.1-4.4 5.3-2.1 10.1-4.7 14.3-7.7L73 0C56.6 9.3 39.8 17.5 22.8 25.1c-.4.1-.9.2-1.3.3z"/>
-        </svg>
+      <img
+  src={logo1}
+  alt="Intro Logo"
+  className="w-32 md:w-48 animate-pulse mb-8"
+/>
         <div className="w-48 h-[2px] bg-white/20 rounded-full overflow-hidden">
           <div className="h-full bg-white origin-left animate-[scaleX_2.4s_cubic-bezier(0.87,0,0.13,1)]" style={{ animationName: 'scaleX', animationFillMode: 'forwards' }}></div>
         </div>
@@ -696,9 +698,12 @@ export default function App() {
           
           {/* Brand/Logo Col */}
           <div className="md:col-span-4 flex flex-col justify-between">
-            <svg viewBox="0 0 73 26" className="w-24 text-black fill-current mb-8 cursor-pointer hover:scale-110 transition-transform origin-left" onClick={() => window.scrollTo({top:0, behavior:'smooth'})}>
-              <path d="M21.5 25.4c-6.2 0-11.6-1.9-15.7-5.5C2.1 16.6.1 12.4.1 7.4.1 4.5 1.2 1.8 3.3.1c-.2.7-.3 1.4-.3 2.2 0 4.1 2.8 8.1 7.8 11.2 3.6 2.2 8.3 3.8 13.5 4.5 4.8.6 9.8.5 14.8-.2 6-.8 11.8-2.3 17.1-4.4 5.3-2.1 10.1-4.7 14.3-7.7L73 0C56.6 9.3 39.8 17.5 22.8 25.1c-.4.1-.9.2-1.3.3z"/>
-            </svg>
+           <img
+  src={logo}
+  alt="Logo"
+  className="w-24 mb-8 cursor-pointer hover:scale-110 transition-transform origin-left"
+  onClick={() => window.scrollTo({top:0, behavior:'smooth'})}
+/>
             <div className="space-y-4">
               <h4 className="font-bold uppercase tracking-widest text-xs">Join Nike</h4>
               <p className="text-sm text-zinc-500 font-medium max-w-xs leading-relaxed">Sign up for free to join the community. Get exclusive access to drops and news.</p>
