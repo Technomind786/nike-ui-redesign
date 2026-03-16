@@ -4,7 +4,8 @@ A premium Nike-inspired e-commerce landing page built using **React + Vite + Tai
 This project focuses on modern UI/UX design, smooth animations, and interactive product browsing.
 
 ## Live Website
-Coming Soon (Deployed on Vercel)
+
+https://nike-ui-redesign.vercel.app/
 
 ## Features
 
